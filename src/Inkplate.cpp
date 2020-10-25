@@ -365,6 +365,12 @@ void Inkplate::display3b()
     einkOff();
 }
 
+//Load old bitmap to RAM (after deep sleep)
+void Inkplate::load1b() {
+    memcpy(DMemoryNew, _partial, 60000);
+    _blockPartial = 0;
+}
+
 void Inkplate::partialUpdate()
 {
     if (getDisplayMode() == 1)

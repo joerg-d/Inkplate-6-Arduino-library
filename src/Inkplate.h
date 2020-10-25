@@ -41,6 +41,7 @@ class Inkplate : public System, public Graphics
 
     void clearDisplay();
     void display();
+    void load1b();
     void partialUpdate();
     void clean();
 
