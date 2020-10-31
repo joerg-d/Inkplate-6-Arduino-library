@@ -192,6 +192,7 @@ public:
     void drawPixel(int16_t x0, int16_t y0, uint16_t color);
     void clearDisplay();
     void display();
+    void load1b();
     void partialUpdate();
     void drawBitmap3Bit(int16_t _x, int16_t _y, const unsigned char *_p, int16_t _w, int16_t _h);
     void setRotation(uint8_t);

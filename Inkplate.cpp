@@ -191,6 +191,17 @@ void Inkplate::display()
         display3b();
 }
 
+//Load old bitmap to RAM (after deep sleep)
+void Inkplate::load1b()
+{
+    for (int i = 0; i < 60000; i++)
+    {
+        *(D_memory_new + i) &= *(_partial + i);
+        *(D_memory_new + i) |= (*(_partial + i));
+    }
+    _blockPartial = 0;
+}
+
 void Inkplate::partialUpdate()
 {
     if (_displayMode == 1)
